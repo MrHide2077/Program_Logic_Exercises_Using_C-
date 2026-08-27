@@ -37,4 +37,54 @@ int main() {
 
 		int xy = 10, yx = 20, yz = 30; // Yeah you can declare multiple variables in one line, but it's not recommended
 		cout << "The result of the operation of xy, yx and yz, is: "<< "\n" << xy + yx + yz << "\n";
+		cout << endl;	
+
+		//Now  let's talk about constants, this means you can "block" a variable just to be read and not modified
+		const int myconst = 1945;
+		cout << "What is may damn constant? " << endl << myconst << "\n";
+		cout << endl;
+
+		//Now let's make this interesting, let's talk about cin (Now we are gonna introduce data)
+		int x_1, y_1;
+		cout << "Now enter a number: ";
+		cin >> x_1;
+		cout << "Now enter another number: ";
+		cin >> y_1;
+		cout << "The sum of " << x_1 << " and " << y_1 << " is: " << x_1 + y_1 << "\n";
+		cout << "I hope you're enjoying this...bye!\n";
+		cout << endl;
+
+		//Well.. this is helpful, but use ONLY when the variables are simple. Yeah I'm talkiing about "auto" keyword, this is used to automatically detect the type of the variable, but it can be dangerous if you don't know what the hell you're doing
+		auto mydumbnumber = 10; // This is an integer
+		auto mydamndouble = 9.5; // This is a double
+		auto mydamststring = "Hi"; // This is a string, as you can see, the compiler automatically detects the type, but don't be a fool using this in more complex variables. And you have to assign a value to the variable first
+		cout << mydumbnumber << "\n";
+		cout << mydamndouble << "\n";	
+		cout << mydamststring << "\n";	
+		cout << endl;
+
+		//Haha we're gonna talk about operators, you know... +,-,/,*, and blah blah blah. So pay god damn attention, because this is important. Let's start with the basic ones:
+		int a, b;
+		a = 20;
+		b = 15;
+		cout << "Addition :" << (a+b) << "\n";
+		cout << "Subtraction :" << (a - b) << "\n";
+		cout << "Multiplication :" << (a * b) << "\n";
+		cout << "Division :" << (a / b) << "\n";	
+		cout << "Modulus :" << (a % b) << "\n"; // This is used to get the remainder of a division"
+		cout << "Increment :" << (a++) << "\n"; // This is used to increment a variable by 1
+		cout << "Decrement :" << (a--) << "\n"; // This is used to decrement a variable by 1. If you came from languages like Java, this this is basically the same thing
+		//Let's make it fun, let's talk about assignment operators, this is used to assign a value to a variable, but it can also be used to perform operations on the variable and assign the result to the variable. For example:
+		cout << "Assignment operator (+=) :" << (a += 5) << "\n"; // This is used to add a value to a variable and assign the result to the variable
+		cout << "Assignment operator (-=) :" << (b -= 5) << "\n"; // This is used to subtract a value from a variable and assign the result to the variable
+		cout << "Assignment operator (*=) :" << (a *= 5) << "\n"; // This is used to multiply a variable by a value and assign the result to the variable
+		cout << "Assignment operator (/=) :" << (b /= 5) << "\n"; // This is used to divide a variable by a value and assign the result to the variable
+		cout << "Assignment operator (%=) :" << (a %= 5) << "\n"; // This is used to get the remainder of a variable divided by a value and assign the result to the variable
+		cout << "Assignment operator (|=) :" << (b |= 5) << "\n"; // This is used to perform a bitwise OR operation on a variable and a value and assign the result to the variable
+		cout << "Assignment operator (&=) :" << (a &= 5) << "\n"; // This is used to perform a bitwise AND operation on a variable and a value and assign the result to the variable
+		cout << "Assignment operator (^=) :" << (b ^= 5) << "\n"; // This is used to perform a bitwise XOR operation on a variable and a value and assign the result to the variable
+		cout << "Assignment operator (>>=) :" << (a >>= 5) << "\n"; // This is used to perform a bitwise right shift operation on a variable and a value and assign the result to the variable
+		cout << "Assignment operator (<<=) :" << (b <<= 5) << "\n"; // This is used to perform a bitwise left shift operation on a variable and a value and assign the result to the variable	
+		cout << endl;
+
 }
