@@ -87,4 +87,51 @@ int main() {
 		cout << "Assignment operator (<<=) :" << (b <<= 5) << "\n"; // This is used to perform a bitwise left shift operation on a variable and a value and assign the result to the variable	
 		cout << endl;
 
-}
+		//Now comparison operators, this is used to compare two values and return a boolean value (true or false).
+		int val1 = 10;
+		int val2 = 20;
+		cout << "Is val1 equal to val2? " << (val1 == val2) << "\n"; //It's means that if val1 is equal to val2, it will return true (1), otherwise it will return false (0)
+		cout << "Is val1 not equal to val2? " << (val1 != val2) << "\n"; // It's means that if val1 is not equal to val2, it will return true (1), otherwise it will return false (0)
+		cout << "Is val1 greater than val2? " << (val1 > val2) << "\n"; // It's means that if val1 is greater than val2, it will return true (1), otherwise it will return false (0)
+		cout << "Is val1 less than val2? " << (val1 < val2) << "\n"; // It's means that if val1 is less than val2, it will return true (1), otherwise it will return false (0)
+		cout << "Is val1 greater than or equal to val2? " << (val1 >= val2) << "\n"; // It's means that if val1 is greater than or equal to val2, it will return true (1), otherwise it will return false (0)
+		cout << "Is val1 less than or equal to val2? " << (val1 <= val2) << "\n"; // It's means that if val1 is less than or equal to val2, it will return true (1), otherwise it will return false (0)
+		cout << endl;
+
+		//Well it's making interesting, but let's talk about logical operators, this is used to combine two or more conditions and return a boolean value (true or false).
+		//We have three logical operators: AND (&&), OR (||) and NOT (!). Same as Java lol:
+		int val3 = 10;
+		int val4 = 20;
+		cout << "Is val3 equal to 10 AND val4 equal to 20? " << ((val3 == 10) && (val4 == 20)) << "\n"; // It's means that if val3 is equal to 10 AND val4 is equal to 20, it will return true (1), otherwise it will return false (0)
+		cout << "Is val3 equal to 10 OR val4 equal to 20? " << ((val3 == 10) || (val4 == 20)) << "\n"; // It's means that if val3 is equal to 10 OR val4 is equal to 20, it will return true (1), otherwise it will return false (0)
+		cout << "Is val3 not equal to 10? " << (!(val3 == 10)) << "\n"; // It's means that if val3 is not equal to 10, it will return true (1), otherwise it will return false (0)		
+		cout << endl;	
+		
+		//Yeah this will be easy to understand, C++ solve operations in a priority order, this means that it will solve the operations in the following order: 
+		cout << "First priority: Parentheses ()\n";
+		cout << "Second priority: Exponents ^\n";
+		cout << "Third priority: Multiplication * and Division /\n";
+		cout << "Fourth priority: Addition + and Subtraction -\n";
+		cout << "Fifth priority: Assignment =\n";
+		cout << "Sixth priority: Comparison ==, !=, >, <, >=, <=\n";
+		cout << "Seventh priority: Logical AND &&\n";
+		cout << "Eighth priority: Logical OR ||\n";	
+		cout << endl;
+
+		//Now somenthing different, String concatenation
+		string str1 = "My name is: ";
+		string str2 = "Mr_Hyde";
+		cout << str1 + str2 << "\n"; // This is used to concatenate two strings (+)
+		//And you can use append() method to concatenate two strings, but it's not recommended because it's slower than using + operator
+		cout << str1.append(str2) << "\n"; // This is used to concatenate two strings (append())
+		cout << endl;
+
+		//Now length of a string, this is used to get the length of a string (number of characters in a string)
+		string str3 = "Damn string length is: ";
+		cout << str3 << str3.length() << "\n"; // This is used to get the length of a string (length())
+		//Also you can use size() method to get the length of a string, but it's not recommended because it's slower than using length() method
+		cout << str3 << str3.size() << "\n"; // This is used to get the length of a string (size())
+		cout << endl;
+
+		//Acces string characters, this is used to access a specific character in a string (string[index])
+	}
