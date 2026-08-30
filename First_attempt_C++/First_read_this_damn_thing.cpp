@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 int main() {
 	cout << "Hello World!\n";
@@ -133,5 +134,39 @@ int main() {
 		cout << str3 << str3.size() << "\n"; // This is used to get the length of a string (size())
 		cout << endl;
 
-		//Acces string characters, this is used to access a specific character in a string (string[index])
+		//Access string characters, this is used to access a specific character in a string (string[index])
+		string mydamnstring1 = "FOOL";
+		cout << "The selected character is... " << mydamnstring1[0] << "\n"; // This is used to access a specific character in a string (string[index])
+		cout << "The selected character is... " << mydamnstring1[1] << "\n";
+		cout << "The selected character is... " << mydamnstring1[2] << "\n";
+		cout << "The selected character is... " << mydamnstring1[3] << "\n";
+		cout << "The full word is... " << mydamnstring1 << "\n";
+		cout << endl;
+		//And of course, you can change the damn character in a string (string[index] = 'new character')
+		mydamnstring1[0] = 'P'; //Don't forget this is now a char, use single quotes to change the character
+		cout << "The modified word is... " << mydamnstring1 << "\n";
+		cout << endl;
+
+		//Hellyeah, now we are gonna see the damn at() method, this is used to access a specific character in a string (string.at(index))
+		string mydamnstring2 = "Animal";
+		cout << "The selected character is... " << mydamnstring2.at(0) << "\n"; // This is used to access a specific character in a string (string.at(index))
+		cout << "The selected character is... " << mydamnstring2.at(1) << "\n";
+		cout << "The selected character is... " << mydamnstring2.at(2) << "\n";
+		cout << "The selected character is... " << mydamnstring2.at(3) << "\n";
+		cout << "The full word is... " << mydamnstring2 << "\n";
+		cout << endl;
+
+		/*Well  it's time to make an aclaration, C++ cin recognices a space as the end of the input, this means that if you enter a string with spaces, it will only take the first word.
+		That's why we use getline() function to read a string with spaces.*/
+		string myfullname2;
+		cout << "Enter your full name: ";
+		cin >> myfullname2;
+		cout << "Your full name is: " << myfullname2 << "\n"; // This will only print the first word of the input
+		//But now with getline() function, we can read a string with spaces
+		cin.ignore(numeric_limits<streamsize>::max(), '\n'); //This is used to ignore the newline character left in the input buffer by the previous cin statement, so that getline() can read the full line of input.
+		cout << "Enter your really full name: "<<"\n";
+		// This will only print the first word of the input, but we can use getline() function to read a string with spaces	
+		getline (cin, myfullname2);
+		cout << "Your really full name is: " << myfullname2 << "\n"; // This will print the full name of the input.
+
 	}
