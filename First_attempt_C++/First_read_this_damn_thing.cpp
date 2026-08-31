@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 using namespace std;
 int main() {
 	cout << "Hello World!\n";
@@ -168,5 +169,66 @@ int main() {
 		// This will only print the first word of the input, but we can use getline() function to read a string with spaces	
 		getline (cin, myfullname2);
 		cout << "Your really full name is: " << myfullname2 << "\n"; // This will print the full name of the input.
+		cout << endl;
+
+		//Math in C++!!
+		//For now we are gonna use max() and min() functions, this is used to get the maximum and minimum value of two numbers
+		int maxX = 7;
+		int minY = 1;
+		cout << "The maximum value is: " << max(maxX, minY) << "\n"; // This is used to get the maximum value of two numbers (max())
+		cout << "The minimum value is: " << min(maxX, minY) << "\n"; // This is used to get the minimum value of two numbers (min())
+		cout << endl;
+
+		//C++ math library, this is used to perform mathematical operations in C++. We are gonna use pow() and sqrt() functions, this is used to calculate the power and square root of a number
+		cout << "The square root of 216 is: " << sqrt(216) << "\n"; // This is used to calculate the square root of a number (sqrt())
+		cout << "The rounded value of 3.1415 is: " << round(3.1415) << "\n"; // This is used to round a number to the nearest integer (round())
+		cout << "The power of 316 raised to 3 is: " << pow(316, 3) << "\n"; // This is used to calculate the power of a number (pow())"
+		cout << "The logarithm of 5 is: " << log(5) << "\n"; // This is used to calculate the logarithm of a number (log())
+		cout << "The absolute value of -512 is: " << abs(-512) << "\n"; // This is used to calculate the absolute value of a number (abs())
+		cout << endl;
+
+		//I forgot something, if tou want to see the boolean value as true or false instead of 0 and 1, you can use boolalpha manipulator, this is used to print the boolean value as true or false instead of 0 and 1
+		bool Hi = true;
+		bool Bye = false;	
+		cout << "The boolean value of Hi is: " << boolalpha << Hi << "\n"; // This is used to print the boolean value as true or false instead of 0 and 1 (boolalpha)
+		cout << "The boolean value of Bye is: " << boolalpha << Bye << "\n"; // This is used to print the boolean value as true or false instead of 0 and 1 (boolalpha)	
+		//And if you want to revert back to 0 and 1, you can use noboolalpha manipulator, this is used to print the boolean value as 0 and 1 instead of true or false
+		cout << "The boolean value of Hi is: " << noboolalpha << Hi << "\n"; // This is used to print the boolean value as 0 and 1 instead of true or false (noboolalpha)
+		cout << "The boolean value of Bye is: " << noboolalpha << Bye << "\n"; // This is used to print the boolean value as 0 and 1 instead of true or false (noboolalpha)
+		cout << endl;	
+
+		//Hahaha now things are gonna make more interesting, now if/else statements, this is used to perform a block of code if a condition is true, and another block of code if the condition is false
+		//And again... this is very similar to Java, so if you learned Java first, this will be god damn easy to understand
+		cout << "Enter a number: ";
+		int xi;
+		cin >> xi;
+		if (xi < 100) {
+			cout << "The value of xi is less than 100... true" << "\n";
+		}
+		else {
+			cout << "Nop dude, the value of xi is greater than or equal to 100... false"<< "\n";
+		}
+		//And using boolean values, this is used to perform a block of code if a condition is true, and another block of code if the condition is false
+		bool isgreater = (xi > 100);
+		if (isgreater) {
+			cout << "The value of xi is greater than 100... true" << "\n";
+		}
+		else if (xi == 50) {
+			cout << "The value is in the middle" << "\n";
+		}else{
+			cout << "The value of xi is not greater than 100... false" << "\n";
+		}
+
+		//Short Hand If...Else (Ternary Operator). This is used to perform a block of code if a condition is true, and another block of code if the condition is false, but in a shorter way. The syntax is: condition ? true : false;
+		int damntime = 10;
+		damntime > 12 ? cout << "Good morning!" : cout << "Good evening!" << "\n"; // This is used to perform a block of code if a condition is true, and another block of code if the condition is false, but in a shorter way (Ternary Operator)" :
+		//Remember the ternary operators are used just for simple things. Don't damn use this for harder things
+		cout << endl;	
+		//And right you can nest it
+		string message = (damntime > 18) ? "Good evening"
+			: (damntime < 12) ? "Good Morning"
+			: "Good Evening";
+		cout << message;
+		cout << endl;
 
 	}
